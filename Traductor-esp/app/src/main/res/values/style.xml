@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ActionBar"  parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/PrimaryDark</item>
+        <item name="colorSecondary">@color/SecondaryColor</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="colorControlHighlight">@color/focus</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="colorAccent">@color/acent</item>
+    </style>
+
+</resources>

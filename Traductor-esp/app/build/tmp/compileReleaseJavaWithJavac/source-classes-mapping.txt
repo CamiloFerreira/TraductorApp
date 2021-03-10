@@ -1,0 +1,16 @@
+com/lfserver/tk/BuildConfig.java
+ com.lfserver.tk.BuildConfig
+com/lfserver/tk/Fragments/FragmentDiccionario.java
+ com.lfserver.tk.Fragments.FragmentDiccionario
+com/lfserver/tk/Modelo.java
+ com.lfserver.tk.Modelo
+com/lfserver/tk/ApiConnect.java
+ com.lfserver.tk.ApiConnect
+com/lfserver/tk/AdapterModel.java
+ com.lfserver.tk.AdapterModel
+ com.lfserver.tk.AdapterModel$ViewHolder
+com/lfserver/tk/Fragments/MainFragment.java
+ com.lfserver.tk.Fragments.MainFragment
+ com.lfserver.tk.Fragments.MainFragment$1
+com/lfserver/tk/MainActivity.java
+ com.lfserver.tk.MainActivity

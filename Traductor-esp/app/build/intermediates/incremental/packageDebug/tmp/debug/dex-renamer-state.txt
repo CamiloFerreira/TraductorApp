@@ -1,0 +1,4 @@
+#Wed Mar 10 02:08:18 CLST 2021
+base.0=C\:\\Users\\camil\\Documents\\MEGA\\Practica\\Traductor-esp\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
