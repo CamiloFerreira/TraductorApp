@@ -40,6 +40,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+/*
+      @author : Luis Ferreira
+      Clase principal del Fragmento de diccioanario , donde este debe enlazar tanto el spinner ,
+      como el editText que se encuentra en el , para poder realizar el filtrado de palabras.
+
+ */
+
 public class FragmentDiccionario extends Fragment implements AdapterView.OnItemSelectedListener, TextWatcher {
     Spinner trad_comb,letra_comb;
     EditText palabra;

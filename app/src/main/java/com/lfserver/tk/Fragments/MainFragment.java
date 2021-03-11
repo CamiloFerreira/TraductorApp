@@ -16,12 +16,23 @@ import androidx.fragment.app.Fragment;
 import com.lfserver.tk.ApiConnect;
 import com.lfserver.tk.R;
 
+
+/*
+      @author : Luis Ferreira
+      Clase principal del fragmento principal , este siendo el fragmento donde se presentan
+      los edit text con el ingreso de texto para realizar la traduccion
+
+ */
+
+
 public class MainFragment extends Fragment {
 
     Button enviar;
     EditText esp,map;
     ApiConnect api;
     Boolean existe_arch;
+
+
     public  MainFragment(Boolean existe_arc,ApiConnect api){
         this.existe_arch = existe_arc;
         this.api         = api;

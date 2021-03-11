@@ -20,6 +20,15 @@ import java.net.ProtocolException;
 import java.net.URL;
 import java.util.ArrayList;
 
+/*
+    @author : Luis Ferreira
+    Clase que permite realizar la conexion a la api , donde utilizando el metodo requests se pide
+    la conexion a la api , donde este devuelve un string que es transformado a json para ser
+    procesado .
+ */
+
+
+
 public class ApiConnect {
 
     String url_base ;
@@ -37,7 +46,7 @@ public class ApiConnect {
     }
 
     /*
-        Funcion que obtiene el JsonObject con los datos obtenidos de /gDic de la api
+        Funcion que retorna el JsonObject con los datos obtenidos de /gDic de la api
      */
     public JSONObject getDic(){
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -81,6 +90,11 @@ public class ApiConnect {
             return null;
         }
     }
+
+    /*
+        Funcion que retorna una cadena  con la traduccion obtenida mediante la api
+        teniendo como parametro la oracion a traduccir .
+    */
     public String getTrad(String palabra){
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -128,6 +142,10 @@ public class ApiConnect {
             return null;
         }
     }
+
+    /*
+     Funcion que retorna la cadena  con los datos obtenidos de /gDic de la api
+  */
     public String dicString()  {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -162,6 +180,12 @@ public class ApiConnect {
             return " ";
         }
     }
+
+ /*
+    Funcion para establecer si existe conexion a internet en la aplicacion , donde verifica el
+    estado del dispositivo respecto a la network y si existe acceso a internet
+  */
+
     public  boolean isOnline() {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
