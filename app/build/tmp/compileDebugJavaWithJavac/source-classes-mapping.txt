@@ -11,6 +11,5 @@ com/lfserver/tk/AdapterModel.java
  com.lfserver.tk.AdapterModel$ViewHolder
 com/lfserver/tk/Fragments/MainFragment.java
  com.lfserver.tk.Fragments.MainFragment
- com.lfserver.tk.Fragments.MainFragment$1
 com/lfserver/tk/MainActivity.java
  com.lfserver.tk.MainActivity

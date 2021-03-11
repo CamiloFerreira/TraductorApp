@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\camil\\Documents\\MEGA\\Practica\\Traductor-esp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hr\\values-hr.xml",
+            "outputFile": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hr\\values-hr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\camil\\.gradle\\caches\\transforms-2\\files-2.1\\0b040ae6fd7360855475a012c5af81a6\\material-1.3.0\\res\\values-hr\\values-hr.xml",

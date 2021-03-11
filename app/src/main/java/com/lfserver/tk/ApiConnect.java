@@ -1,6 +1,8 @@
 package com.lfserver.tk;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.StrictMode;
 import android.util.Log;
 import android.widget.Toast;
@@ -21,27 +23,34 @@ import java.util.ArrayList;
 public class ApiConnect {
 
     String url_base ;
-    ArrayList <Modelo> listModelo;
+    JSONObject jsonData;
     Context context;
     public ApiConnect(String url , Context context){
         this.url_base = url;
         this.context = context;
-        this.listModelo = new ArrayList<Modelo>();
+        if(this.isOnline()){
+            this.jsonData = getDic();
+        }
+    }
+    public JSONObject getData(){
+        return this.jsonData;
     }
 
+    /*
+        Funcion que obtiene el JsonObject con los datos obtenidos de /gDic de la api
+     */
     public JSONObject getDic(){
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-
 
         URL url = null;
         HttpURLConnection conn;
 
         try {
+            //Realiza la conexion a /gDic
             url = new URL(this.url_base+"/gDic");
             conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
-
             conn.connect();
 
             BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
@@ -54,11 +63,8 @@ public class ApiConnect {
             while ((inputLine = in.readLine()) != null){
                 response.append(inputLine);
             }
-
             json = response.toString();
-
             JSONObject jsonobj = new JSONObject(json);
-
             return jsonobj;
 
         } catch (MalformedURLException e) {
@@ -78,7 +84,6 @@ public class ApiConnect {
     public String getTrad(String palabra){
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-
 
         URL url = null;
         HttpURLConnection conn;
@@ -157,4 +162,10 @@ public class ApiConnect {
             return " ";
         }
     }
+    public  boolean isOnline() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        return networkInfo != null && networkInfo.isAvailable() && networkInfo.isConnected();
+    }
+
 }

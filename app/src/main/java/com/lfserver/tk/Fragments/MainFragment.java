@@ -22,10 +22,10 @@ public class MainFragment extends Fragment {
     EditText esp,map;
     ApiConnect api;
     Boolean existe_arch;
-    public  MainFragment(Boolean existe_arc){
+    public  MainFragment(Boolean existe_arc,ApiConnect api){
         this.existe_arch = existe_arc;
+        this.api         = api;
     }
-
 
     @Nullable
     @Override
@@ -40,40 +40,18 @@ public class MainFragment extends Fragment {
         enviar = view.findViewById(R.id.enviar);
 
         //Si existe conexion a internet
-        if (isOnlineNet()){
-            api = new ApiConnect("http://lfserver.tk:5000",view.getContext());
-            enviar.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String palabra = esp.getText().toString();
-                    String traduccion = api.getTrad(palabra);
-
-                    map.setText(traduccion);
-                }
-            });
+        if (api.isOnline()){
+            enviar.setOnClickListener(this::Presionado);
         }else{
-            Toast.makeText(view.getContext(),"Error no hay conexion a internet",Toast.LENGTH_LONG).show();
+            Toast.makeText(view.getContext(),"No hay conexion a internet",Toast.LENGTH_LONG).show();
         }
-
-
-
         return view;
     }
 
-    public Boolean isOnlineNet() {
-
-        try {
-            Process p = java.lang.Runtime.getRuntime().exec("ping -c 1 www.google.es");
-
-            int val           = p.waitFor();
-            boolean reachable = (val == 0);
-            return reachable;
-
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return false;
+    public void Presionado(View view){
+        String palabra = esp.getText().toString();
+        String traduccion = api.getTrad(palabra);
+        map.setText(traduccion);
     }
 
 

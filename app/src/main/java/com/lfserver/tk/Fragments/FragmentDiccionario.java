@@ -51,8 +51,9 @@ public class FragmentDiccionario extends Fragment implements AdapterView.OnItemS
     String letra = "a";
     boolean existe_arch;
 
-    public FragmentDiccionario(boolean existe_arch){
+    public FragmentDiccionario(boolean existe_arch,ApiConnect api){
         this.existe_arch = existe_arch;
+        this.api = api;
     }
 
     Button btn1 ;
@@ -66,14 +67,11 @@ public class FragmentDiccionario extends Fragment implements AdapterView.OnItemS
         if(existe_arch){
             datos = CargarFile(view.getContext());
         }else{
-            //Si hay conexion a internet y no existe el archivo
-            if(isOnlineNet()){
-                //Se crea la clase que conecta con la api
-                ApiConnect api = new ApiConnect("http://lfserver.tk:5000",getContext());
-                datos = api.getDic();
-            }else {
+            if(api.isOnline()){
+                datos = api.getData();
+            }else{
                 try {
-                    datos = new JSONObject("{'a':[{'palabra':'Internet','significado':'No existe conexion a internet'}]}");
+                    datos = new JSONObject("{'a':[{'palabra':'No hay conexion a internet','significado':['Reintente!'] }]}");
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -123,9 +121,6 @@ public class FragmentDiccionario extends Fragment implements AdapterView.OnItemS
                 sig = sig.replace("]","");
                 sig = sig.replace("\"","");
 
-
-
-
                 Modelo mdl1 = new Modelo(obj.optString("palabra").toString(),sig);
                 data.add(mdl1);
             }
@@ -167,6 +162,7 @@ public class FragmentDiccionario extends Fragment implements AdapterView.OnItemS
 
 
     }
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         switch (parent.getId())
@@ -185,24 +181,6 @@ public class FragmentDiccionario extends Fragment implements AdapterView.OnItemS
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-
-
-    public Boolean isOnlineNet() {
-
-        try {
-            Process p = java.lang.Runtime.getRuntime().exec("ping -c 1 www.google.es");
-
-            int val           = p.waitFor();
-            boolean reachable = (val == 0);
-            return reachable;
-
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return false;
-    }
-
 
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -224,7 +202,6 @@ public class FragmentDiccionario extends Fragment implements AdapterView.OnItemS
                 String significado=  mdl.getSignificado().toLowerCase();
                 String selection = trad_comb.getSelectedItem().toString().toLowerCase();
                 if(selection.equals("esp")){
-
                     //Buscan el significado que contengan el texto
                     if(significado.contains(text)){
                         modelList.add(mdl);
