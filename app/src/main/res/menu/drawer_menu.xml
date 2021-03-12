@@ -17,5 +17,17 @@
             </item>
         </menu>
     </item>
+    <item android:title="Secundario">
+        <menu>
+            <item
+                android:id="@+id/bajar"
+                android:icon="@drawable/ic_descarga"
+                android:title="Descargar recursos"/>
+            <item
+                android:id="@+id/creditos"
+                android:icon="@drawable/ic_creditos"
+                android:title="Creditos" />
+        </menu>
+    </item>
 
 </menu>

@@ -16,8 +16,16 @@
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_main.xml.flat",
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\layout\\content_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rect2.xml.flat",
@@ -34,6 +42,10 @@
     {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_search.png.flat",
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-xhdpi\\ic_search.png"
+    },
+    {
+        "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\menu_drawer_menu.xml.flat",
@@ -64,6 +76,10 @@
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
     },
     {
+        "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_descarga.png.flat",
+        "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_descarga.png"
+    },
+    {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_search.png.flat",
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-mdpi\\ic_search.png"
     },
@@ -78,6 +94,10 @@
     {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_creditos.png.flat",
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_creditos.png"
+    },
+    {
+        "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_descarga.png.flat",
+        "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-hdpi\\ic_descarga.png"
     },
     {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_switch_item.xml.flat",
@@ -102,6 +122,10 @@
     {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_dic.png.flat",
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-mdpi\\ic_dic.png"
+    },
+    {
+        "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_descarga.png.flat",
+        "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-xxhdpi\\ic_descarga.png"
     },
     {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_diccionario_fragment.xml.flat",
@@ -136,6 +160,10 @@
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_home.png"
     },
     {
+        "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ruca_ico.png.flat",
+        "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable\\ruca_ico.png"
+    },
+    {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_separador.xml.flat",
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable\\separador.xml"
     },
@@ -156,8 +184,16 @@
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-mdpi\\ic_home.png"
     },
     {
+        "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_descarga.png.flat",
+        "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-mdpi\\ic_descarga.png"
+    },
+    {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_dic.png.flat",
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-hdpi\\ic_dic.png"
+    },
+    {
+        "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_descarga.png.flat",
+        "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-xhdpi\\ic_descarga.png"
     },
     {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_drawer_toolbar.xml.flat",
@@ -184,6 +220,10 @@
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable\\rect.xml"
     },
     {
+        "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_config.png.flat",
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_config.png"
     },
@@ -192,20 +232,20 @@
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_conf.xml.flat",
-        "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\menu\\menu_conf.xml"
+        "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_home.png.flat",
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-xhdpi\\ic_home.png"
     },
     {
-        "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_config.png.flat",
-        "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-xhdpi\\ic_config.png"
-    },
-    {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_dic.png.flat",
         "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-xxxhdpi\\ic_dic.png"
+    },
+    {
+        "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_config.png.flat",
+        "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\drawable-xhdpi\\ic_config.png"
     },
     {
         "merged": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_search.png.flat",

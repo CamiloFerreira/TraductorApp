@@ -1038,6 +1038,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1647,6 +1648,7 @@ drawable design_snackbar_background
 drawable ic_clock_black_24dp
 drawable ic_config
 drawable ic_creditos
+drawable ic_descarga
 drawable ic_dic
 drawable ic_home
 drawable ic_keyboard_black_24dp
@@ -1691,6 +1693,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable rect
 drawable rect2
+drawable ruca_ico
 drawable separador
 drawable test_custom_background
 drawable tooltip_frame_dark
@@ -1888,6 +1891,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id info
 id invisible
 id inward
@@ -2275,8 +2279,8 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu drawer_menu
-menu menu_conf
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description

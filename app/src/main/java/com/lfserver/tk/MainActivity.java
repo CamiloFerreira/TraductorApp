@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     //Variables para cargar el fragmento principal
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
-    private MenuItem item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,33 +88,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
-    //Se carga el menu con opciones
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        //Se carga el menu creado con el id
-        getMenuInflater().inflate(R.menu.menu_conf, menu);
-        return true;
-    }
-
-    /*
-        Detecta el presionado del menu que esta en la parte superior derecha , detectando que
-        boton fue presionado dependiendo del id que este tenga , los id se encuentran en
-        res/menu/menu_conf.xml
-     */
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        if(item.getItemId() == R.id.creditos){
-            getApplicationContext().deleteFile("data");
-            Toast.makeText(getApplicationContext(),"Creditos",Toast.LENGTH_SHORT).show();
-        }
-        if(item.getItemId() == R.id.bajar){
-            this.Savejson();
-        }
-        return false;
-    }
-
     /*
         Detecta la pulsacion del drawermenu , donde dependiendo del id detecta que seccion fue
         presionada
@@ -137,7 +109,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentTransaction  = fragmentManager.beginTransaction();
             fragmentTransaction.add(R.id.container,dic);
             fragmentTransaction.commit();
-
+        }
+        if(item.getItemId() == R.id.creditos){
+            getApplicationContext().deleteFile("data");
+            Toast.makeText(getApplicationContext(),"Creditos",Toast.LENGTH_SHORT).show();
+        }
+        if(item.getItemId() == R.id.bajar){
+            this.Savejson();
         }
         return false;
     }
