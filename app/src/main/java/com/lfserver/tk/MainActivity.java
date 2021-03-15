@@ -3,7 +3,6 @@ package com.lfserver.tk;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -13,17 +12,21 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
+import com.google.gson.Gson;
+import com.lfserver.tk.Fragments.FragmentCreditos;
 import com.lfserver.tk.Fragments.FragmentDiccionario;
 import com.lfserver.tk.Fragments.MainFragment;
+import com.lfserver.tk.Retrofit.ApiRetrofit;
+import com.lfserver.tk.Retrofit.Model.PalabrasModel;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 /*
@@ -43,18 +46,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ActionBarDrawerToggle actionBarDrawerToggle;
     Toolbar toolbar;
     NavigationView navigationView;
-    ApiConnect api ;
-
+    ApiRetrofit apiRetrofit;
     //Variables para cargar el fragmento principal
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        api = new ApiConnect("http://lfserver.tk:5000",getApplicationContext());
+
+        apiRetrofit = new ApiRetrofit("http://lfserver.tk:5000",getApplicationContext());
 
         //Se carga el toolbar creado , cargando el archivo drawer_toolbar.xml
         toolbar = findViewById(R.id.toolbar);
@@ -81,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //Cargar fragmento principal
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction  = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.container,new MainFragment(existe(fileList(),"data"),this.api));
+        fragmentTransaction.add(R.id.container,new MainFragment(existe(fileList(),"data"),this.apiRetrofit));
         fragmentTransaction.commit();
 
 
@@ -99,58 +104,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             //Cargar fragmento principal
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction  = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container,new MainFragment(existe(fileList(),"data"),this.api));
+            fragmentTransaction.replace(R.id.container,new MainFragment(existe(fileList(),"data"),this.apiRetrofit));
             fragmentTransaction.commit();
         }
         if(item.getItemId() == R.id.dic){
             //Cargar fragmento Diccionario
-            Fragment dic = new FragmentDiccionario(existe(fileList(),"data"),this.api);
+            Fragment dic = new FragmentDiccionario(existe(fileList(),"data"),this.apiRetrofit);
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction  = fragmentManager.beginTransaction();
             fragmentTransaction.add(R.id.container,dic);
             fragmentTransaction.commit();
         }
         if(item.getItemId() == R.id.creditos){
-            getApplicationContext().deleteFile("data");
-            Toast.makeText(getApplicationContext(),"Creditos",Toast.LENGTH_SHORT).show();
+            fragmentManager = getSupportFragmentManager();
+            fragmentTransaction  = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container,new FragmentCreditos());
+            fragmentTransaction.commit();
         }
         if(item.getItemId() == R.id.bajar){
-            this.Savejson();
+            this.getJson();
         }
         return false;
     }
-/*
-    Funcion que sirve para guardar los datos que retorna la api en un arhivo llamado "data",
-    para posteriormente ser leido en los otros fragmentos
- */
-    private void Savejson() {
-        String data  = api.dicString();
-        int largo = data.length();
 
-        //Si el largo de los datos recibidos es mayor a uno se escribe
-        //ya que si es menor significa que los datos fueron recibidos de manera erronea
-        if(largo > 1){
-            //Guarda el archivo
-            Toast.makeText(getApplicationContext(),"Descargando archivo .. ",Toast.LENGTH_SHORT).show();
-            String filename = "data"; //Nombre del archivo donde se guardaran los datos de la api
-            File file = new File(getApplication().getFilesDir(), filename); //Crea el archivo
-            FileOutputStream outputStream;
-            try {
-
-                //Escribe el archivo y lo cierra
-                outputStream = openFileOutput(filename,Context.MODE_PRIVATE);
-                outputStream.write(data.getBytes());
-                outputStream.close();
-                Toast.makeText(getApplicationContext(),"Archivo guardado !  ",Toast.LENGTH_SHORT).show();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-                Toast.makeText(getApplicationContext(),"Error al crear el archivo",Toast.LENGTH_LONG).show();
-            } catch (IOException e) {
-                e.printStackTrace();
-                Toast.makeText(getApplicationContext(),"Error al crear escribir el archivo",Toast.LENGTH_LONG).show();
-            }
-        }
-    }
 
     /*
         Funcion que retorna true si existe el archivo que se le pasa por parametro , teniendo como parametro
@@ -163,5 +139,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         }
         return false;
+    }
+
+    private  void getJson(){
+
+        ArrayList<PalabrasModel>  palabras = apiRetrofit.ListPalabras;
+
+
+        if(apiRetrofit.isOnline()){
+            Toast.makeText(getApplicationContext(),"Descargando datos ...",Toast.LENGTH_SHORT).show();
+            String json = new Gson().toJson(palabras);
+            String filename = "data";
+            File file = new File(getApplicationContext().getFilesDir(), filename);
+            FileOutputStream outputStream;
+
+            try {
+                outputStream = openFileOutput(filename,Context.MODE_PRIVATE);
+                outputStream.write(json.getBytes());
+                outputStream.close();
+                Toast.makeText(getApplicationContext(),"Archivo guardado !  ",Toast.LENGTH_SHORT).show();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+                Toast.makeText(getApplicationContext(),"Error al crear el archivo",Toast.LENGTH_LONG).show();
+            } catch (IOException e) {
+                e.printStackTrace();
+                Toast.makeText(getApplicationContext(),"Error al crear escribir el archivo",Toast.LENGTH_LONG).show();
+            }
+        }else {
+            Toast.makeText(getApplicationContext(),"No hay conexion a internet :(",Toast.LENGTH_SHORT).show();
+        }
+
+
+
     }
 }

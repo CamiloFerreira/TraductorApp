@@ -1639,6 +1639,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable cidla
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1892,6 +1893,7 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id imageView2
 id info
 id invisible
 id inward
@@ -2085,8 +2087,14 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView11
+id textView12
+id textView13
+id textView15
+id textView16
 id textView2
 id textView3
+id textView9
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2190,6 +2198,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout content_main
+layout creditos_popup
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

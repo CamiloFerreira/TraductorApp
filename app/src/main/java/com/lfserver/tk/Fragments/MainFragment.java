@@ -10,11 +10,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
-import com.lfserver.tk.ApiConnect;
 import com.lfserver.tk.R;
+import com.lfserver.tk.Retrofit.ApiRetrofit;
 
 
 /*
@@ -29,11 +28,11 @@ public class MainFragment extends Fragment {
 
     Button enviar;
     EditText esp,map;
-    ApiConnect api;
+    ApiRetrofit api;
     Boolean existe_arch;
 
 
-    public  MainFragment(Boolean existe_arc,ApiConnect api){
+    public  MainFragment(Boolean existe_arc, ApiRetrofit api){
         this.existe_arch = existe_arc;
         this.api         = api;
     }
@@ -53,16 +52,17 @@ public class MainFragment extends Fragment {
         //Si existe conexion a internet
         if (api.isOnline()){
             enviar.setOnClickListener(this::Presionado);
+
+            
         }else{
-            Toast.makeText(view.getContext(),"No hay conexion a internet",Toast.LENGTH_LONG).show();
+            Toast.makeText(view.getContext(),"No hay conexion a internet !!",Toast.LENGTH_LONG).show();
         }
         return view;
     }
 
     public void Presionado(View view){
         String palabra = esp.getText().toString();
-        String traduccion = api.getTrad(palabra);
-        map.setText(traduccion);
+        api.getTrad(palabra,map);
     }
 
 

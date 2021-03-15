@@ -2,8 +2,8 @@
     <string name="app_name">Traductor-esp</string>
     <string name="open">open</string>
     <string name="close">close</string>
-    
-    
+
+
     <string-array name="lista_combox">
         <item>Esp</item>
         <item>Map</item>
