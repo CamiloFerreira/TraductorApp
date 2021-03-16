@@ -7,10 +7,13 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.lfserver.tk.Retrofit.Model.ModelDic;
-import com.lfserver.tk.Retrofit.Model.PalabrasItem;
-import com.lfserver.tk.Retrofit.Model.PalabrasModel;
-import com.lfserver.tk.Retrofit.Model.TradModel;
+import com.lfserver.tk.Model.ModelDic;
+import com.lfserver.tk.Model.PalabrasItem;
+import com.lfserver.tk.Model.PalabrasModel;
+import com.lfserver.tk.Model.TradModel;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -89,7 +92,13 @@ public class ApiRetrofit {
     public void getTrad(String text, EditText map){
 
 
-        Call<TradModel> call = apiInterface.getTrad(text);
+        String json = "{'cadena':'"+text+"'}";
+        Call<TradModel> call = null;
+        try {
+            call = apiInterface.getTrad(new JSONObject(json).toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         call.enqueue(new Callback<TradModel>() {
             @Override

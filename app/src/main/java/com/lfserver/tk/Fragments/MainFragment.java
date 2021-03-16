@@ -1,6 +1,8 @@
 package com.lfserver.tk.Fragments;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +14,22 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.lfserver.tk.R;
 import com.lfserver.tk.Retrofit.ApiRetrofit;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import com.lfserver.tk.Model.*;
+import com.lfserver.tk.Traductor;
+
+import java.util.List;
+import java.util.StringTokenizer;
 
 
 /*
@@ -30,7 +46,7 @@ public class MainFragment extends Fragment {
     EditText esp,map;
     ApiRetrofit api;
     Boolean existe_arch;
-
+    ArrayList<PalabrasModel> ListPalabras;
 
     public  MainFragment(Boolean existe_arc, ApiRetrofit api){
         this.existe_arch = existe_arc;
@@ -49,12 +65,18 @@ public class MainFragment extends Fragment {
         //Carga el boton
         enviar = view.findViewById(R.id.enviar);
 
-        //Si existe conexion a internet
-        if (api.isOnline()){
-            enviar.setOnClickListener(this::Presionado);
 
-            
+        if(existe_arch){
+            CargarArchivo(view.getContext());
+            enviar.setOnClickListener(this::click);
+        }
+
+        //Si existe conexion a internet
+        if (api.isOnline() ){
+            //enviar.setOnClickListener(this::Presionado);
+
         }else{
+
             Toast.makeText(view.getContext(),"No hay conexion a internet !!",Toast.LENGTH_LONG).show();
         }
         return view;
@@ -65,5 +87,33 @@ public class MainFragment extends Fragment {
         api.getTrad(palabra,map);
     }
 
+    public void click(View view){
+        Traductor traductor = new Traductor(ListPalabras,esp.getText().toString(),map,view.getContext());
+        traductor.start();
+
+    }
+    public void CargarArchivo(Context context){
+        String file = "data";
+        InputStreamReader archivo = null;
+
+        try {
+            archivo = new InputStreamReader(context.openFileInput(file));
+            BufferedReader br = new BufferedReader(archivo);
+            String linea = br.readLine();
+
+            Gson gson = new Gson();
+
+            Type modelList = new TypeToken<ArrayList<PalabrasModel>>(){}.getType();
+            // Carga los datos en el ArrayList
+            this.ListPalabras = gson.fromJson(linea, modelList);
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            Toast.makeText(context,"Error al cargar el archivo ", Toast.LENGTH_SHORT).show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

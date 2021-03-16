@@ -1,13 +1,16 @@
 package com.lfserver.tk.Retrofit;
 
-import com.lfserver.tk.Retrofit.Model.ModelDic;
-import com.lfserver.tk.Retrofit.Model.TradModel;
+
+
+import com.lfserver.tk.Model.ModelDic;
+import com.lfserver.tk.Model.TradModel;
 
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
-import retrofit2.http.Path;
+import retrofit2.http.POST;
 
 public interface ApiInterface {
 
@@ -15,7 +18,7 @@ public interface ApiInterface {
     Call<List<ModelDic>> getDic();
 
 
-    @GET("gTrad/{text}")
-    Call<TradModel> getTrad(@Path("text") String text);
+    @POST("gTrad")
+    Call<TradModel> getTrad(@Body String send);
 
 }

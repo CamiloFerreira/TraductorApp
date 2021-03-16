@@ -20,7 +20,7 @@ import com.lfserver.tk.Fragments.FragmentCreditos;
 import com.lfserver.tk.Fragments.FragmentDiccionario;
 import com.lfserver.tk.Fragments.MainFragment;
 import com.lfserver.tk.Retrofit.ApiRetrofit;
-import com.lfserver.tk.Retrofit.Model.PalabrasModel;
+import com.lfserver.tk.Model.PalabrasModel;
 
 import java.io.File;
 import java.io.FileNotFoundException;

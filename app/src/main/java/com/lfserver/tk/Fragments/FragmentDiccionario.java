@@ -28,7 +28,7 @@ import com.google.gson.reflect.TypeToken;
 import com.lfserver.tk.AdapterModel;
 import com.lfserver.tk.R;
 import com.lfserver.tk.Retrofit.ApiRetrofit;
-import com.lfserver.tk.Retrofit.Model.PalabrasModel;
+import com.lfserver.tk.Model.PalabrasModel;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
