@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
 
-        apiRetrofit = new ApiRetrofit("http://lfserver.tk:5000",getApplicationContext());
+        apiRetrofit = new ApiRetrofit("http://traductor.cidla.org:5000",getApplicationContext());
 
         //Se carga el toolbar creado , cargando el archivo drawer_toolbar.xml
         toolbar = findViewById(R.id.toolbar);

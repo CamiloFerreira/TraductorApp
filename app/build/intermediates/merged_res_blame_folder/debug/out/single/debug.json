@@ -20,20 +20,20 @@
         "source": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_launcher_background.xml"
     },
     {
-        "merged": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_creditos.png.flat",
-        "source": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/src/main/res/drawable-xhdpi/ic_creditos.png"
-    },
-    {
-        "merged": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_dic.png.flat",
+        "source": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/src/main/res/drawable-hdpi/ic_dic.png"
     },
     {
         "merged": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_search.png.flat",
         "source": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/src/main/res/drawable-xxhdpi/ic_search.png"
     },
     {
-        "merged": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_dic.png.flat",
-        "source": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/src/main/res/drawable-hdpi/ic_dic.png"
+        "merged": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_creditos.png.flat",
+        "source": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/src/main/res/drawable-xhdpi/ic_creditos.png"
     },
     {
         "merged": "/home/lferreira/MEGA/Proyecto/TraductorApp/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher_background.png.flat",

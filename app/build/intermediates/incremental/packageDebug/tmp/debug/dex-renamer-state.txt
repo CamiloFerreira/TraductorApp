@@ -1,4 +1,4 @@
-#Sun Mar 14 23:22:45 CLST 2021
+#Mon Mar 15 17:09:27 CLST 2021
 base.0=/home/lferreira/MEGA/Proyecto/TraductorApp/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
