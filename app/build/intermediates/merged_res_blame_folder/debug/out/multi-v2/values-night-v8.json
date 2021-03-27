@@ -6,11 +6,11 @@
                 {
                     "source": "C:\\Users\\camil\\Documents\\MEGA\\Proyecto\\TraductorApp\\app\\src\\main\\res\\values-night\\values-night.xml",
                     "from": {
-                        "startLines": "8,7,10,5,3,9,6,4",
+                        "startLines": "7,6,9,4,2,8,5,3",
                         "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "290,240,378,145,59,337,191,102",
+                        "startOffsets": "288,238,376,143,57,335,189,100",
                         "endColumns": "45,48,39,44,41,39,47,41",
-                        "endOffsets": "331,284,413,185,96,372,234,139"
+                        "endOffsets": "329,282,411,183,94,370,232,137"
                     },
                     "to": {
                         "startLines": "2,3,4,5,6,7,8,9",

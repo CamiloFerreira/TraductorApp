@@ -70,11 +70,16 @@ public class FragmentDiccionario extends Fragment implements AdapterView.OnItemS
         //Primero pregunta si el archivo fue creado
         if(existe_arch){
             //Si el archivo existe
-            this.CargarArchivo(view.getContext()); }
-        else {
-            //Si el archivo no fue creado
-            listPalabras =  apiRetrofit.ListPalabras;
+            this.CargarArchivo(view.getContext());
+        }else{
+            if(apiRetrofit.isOnline()){
+                //Si el archivo no fue creado
+                listPalabras =  apiRetrofit.ListPalabras;
+            }else {
+                Toast.makeText(view.getContext(),"No hay conexion a internet !!",Toast.LENGTH_LONG).show();
+            }
         }
+
 
         //Carga el array list y busca el recycler view
         recycler = view.findViewById(R.id.recicler);
@@ -189,11 +194,11 @@ public class FragmentDiccionario extends Fragment implements AdapterView.OnItemS
 
             for(PalabrasModel model:listPalabras){
                 if(selection.equals("esp")){
-                    if(model.getSig().contains(text)){
+                    if(model.getSig().toLowerCase().contains(text)){
                         listSelection.add(model);
                     }
                 }else {
-                    if(model.getPalabra().contains(text)){
+                    if(model.getPalabra().toLowerCase().contains(text)){
                         listSelection.add(model);
                     }
                 }

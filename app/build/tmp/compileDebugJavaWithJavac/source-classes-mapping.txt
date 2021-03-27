@@ -2,37 +2,12 @@ com/lfserver/tk/Model/ModelDic.java
  com.lfserver.tk.Model.ModelDic
 com/lfserver/tk/BuildConfig.java
  com.lfserver.tk.BuildConfig
-<<<<<<< Updated upstream
 com/lfserver/tk/Retrofit/Model/PalabrasItem.java
  com.lfserver.tk.Retrofit.Model.PalabrasItem
-com/lfserver/tk/Retrofit/Model/ModelDic.java
- com.lfserver.tk.Retrofit.Model.ModelDic
-com/lfserver/tk/MainActivity.java
- com.lfserver.tk.MainActivity
-com/lfserver/tk/Fragments/MainFragment.java
- com.lfserver.tk.Fragments.MainFragment
-com/lfserver/tk/Retrofit/Model/PalabrasModel.java
- com.lfserver.tk.Retrofit.Model.PalabrasModel
-com/lfserver/tk/Fragments/FragmentCreditos.java
- com.lfserver.tk.Fragments.FragmentCreditos
-com/lfserver/tk/Retrofit/Model/TradModel.java
- com.lfserver.tk.Retrofit.Model.TradModel
-com/lfserver/tk/Fragments/FragmentDiccionario.java
- com.lfserver.tk.Fragments.FragmentDiccionario
- com.lfserver.tk.Fragments.FragmentDiccionario$1
-com/lfserver/tk/Modelo.java
- com.lfserver.tk.Modelo
-com/lfserver/tk/Retrofit/ApiRetrofit.java
- com.lfserver.tk.Retrofit.ApiRetrofit
- com.lfserver.tk.Retrofit.ApiRetrofit$1
- com.lfserver.tk.Retrofit.ApiRetrofit$2
-com/lfserver/tk/Retrofit/ApiInterface.java
- com.lfserver.tk.Retrofit.ApiInterface
-com/lfserver/tk/ApiConnect.java
- com.lfserver.tk.ApiConnect
-=======
 com/lfserver/tk/Model/PalabrasModel.java
  com.lfserver.tk.Model.PalabrasModel
+com/lfserver/tk/Retrofit/Model/ModelDic.java
+ com.lfserver.tk.Retrofit.Model.ModelDic
 com/lfserver/tk/Model/TradModel.java
  com.lfserver.tk.Model.TradModel
 com/lfserver/tk/Fragments/MainFragment.java
@@ -42,8 +17,12 @@ com/lfserver/tk/MainActivity.java
  com.lfserver.tk.MainActivity
 com/lfserver/tk/Fragments/FragmentCreditos.java
  com.lfserver.tk.Fragments.FragmentCreditos
+com/lfserver/tk/Retrofit/Model/PalabrasModel.java
+ com.lfserver.tk.Retrofit.Model.PalabrasModel
 com/lfserver/tk/Traductor.java
  com.lfserver.tk.Traductor
+com/lfserver/tk/Retrofit/Model/TradModel.java
+ com.lfserver.tk.Retrofit.Model.TradModel
 com/lfserver/tk/Fragments/FragmentDiccionario.java
  com.lfserver.tk.Fragments.FragmentDiccionario
  com.lfserver.tk.Fragments.FragmentDiccionario$1
@@ -57,7 +36,6 @@ com/lfserver/tk/Model/PalabrasItem.java
  com.lfserver.tk.Model.PalabrasItem
 com/lfserver/tk/Modelo.java
  com.lfserver.tk.Modelo
->>>>>>> Stashed changes
 com/lfserver/tk/AdapterModel.java
  com.lfserver.tk.AdapterModel
  com.lfserver.tk.AdapterModel$ViewHolder

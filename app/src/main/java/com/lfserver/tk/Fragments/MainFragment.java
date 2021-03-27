@@ -43,6 +43,7 @@ import java.util.StringTokenizer;
 public class MainFragment extends Fragment {
 
     Button enviar;
+    Boolean existe = false;
     EditText esp,map;
     ApiRetrofit api;
     Boolean existe_arch;
@@ -66,19 +67,23 @@ public class MainFragment extends Fragment {
         enviar = view.findViewById(R.id.enviar);
 
 
-        if(existe_arch){
-            CargarArchivo(view.getContext());
-            enviar.setOnClickListener(this::click);
-        }
+       //if(existe_arch){
+       //     CargarArchivo(view.getContext());
+       //     enviar.setOnClickListener(this::click);
+       //     Toast.makeText(view.getContext(),"Estoy trabajando con el archivo",Toast.LENGTH_SHORT).show();
+       // }else
+      //{
+           //Si existe conexion a internet
+           if (api.isOnline()){
+               enviar.setOnClickListener(this::Presionado);
 
-        //Si existe conexion a internet
-        if (api.isOnline() ){
-            //enviar.setOnClickListener(this::Presionado);
+           }else{
 
-        }else{
+               Toast.makeText(view.getContext(),"No hay conexion a internet !!",Toast.LENGTH_LONG).show();
+           }
+      //}
 
-            Toast.makeText(view.getContext(),"No hay conexion a internet !!",Toast.LENGTH_LONG).show();
-        }
+
         return view;
     }
 
@@ -88,8 +93,10 @@ public class MainFragment extends Fragment {
     }
 
     public void click(View view){
-        Traductor traductor = new Traductor(ListPalabras,esp.getText().toString(),map,view.getContext());
-        traductor.start();
+       Traductor traductor = new Traductor(ListPalabras,esp.getText().toString(),map,view.getContext());
+       // traductor.start();
+        String traduccion = traductor.Traducir();
+        map.setText(traduccion);
 
     }
     public void CargarArchivo(Context context){

@@ -2,10 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="background">#57ADDE</color>
-    <color name="primaryColor"> #4468E1</color>
-    <color name="SecondaryColor">#55B7C2</color>
-    <color name="PrimaryDark">#629BFA</color>
-    <color name="focus">#51CF95</color>
+    <color name="background">#6cb37b</color>
+    <color name="primaryColor"> #8EBF69</color>
+    <color name="SecondaryColor">#6FC99C</color>
+    <color name="PrimaryDark">#5C9969</color>
+    <color name="focus">#69BFAD</color>
     <color name="acent">#3BC2ED</color>
+
+    <color name="rectCol">#73BF83</color>
 </resources>

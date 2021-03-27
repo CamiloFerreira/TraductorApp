@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
 
-        apiRetrofit = new ApiRetrofit("http://traductor.cidla.org:5000",getApplicationContext());
+        apiRetrofit = new ApiRetrofit("http://traductormap.tk",getApplicationContext());
 
         //Se carga el toolbar creado , cargando el archivo drawer_toolbar.xml
         toolbar = findViewById(R.id.toolbar);
@@ -116,6 +116,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentTransaction.commit();
         }
         if(item.getItemId() == R.id.creditos){
+
+            getApplicationContext().deleteFile("data");
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction  = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container,new FragmentCreditos());

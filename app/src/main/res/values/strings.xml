@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">Traductor-esp</string>
+    <string name="app_name">Athengun</string>
     <string name="open">open</string>
     <string name="close">close</string>
+    <string name="pregunta">\?</string>
 
 
     <string-array name="lista_combox">

@@ -10,50 +10,107 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Traductor extends Thread {
+public class Traductor{
 
     ArrayList <PalabrasModel> ListPalabras;
-    String palabra ;
+    String oracion ;
     EditText map;
     Context context;
     public Traductor(ArrayList<PalabrasModel> listPalabras, String palabra, EditText map, Context context) {
         this.ListPalabras = listPalabras;
-        this.palabra = palabra;
+        this.oracion = palabra;
         this.map = map;
         this.context = context;
     }
 
-    public void run(){
+    /*
+        Funcion que busca la traduccion por tokens
+    */
+    public void BuscarxToken(){
 
+    }
+    /*
+        Funcion que sirve para determinar si es pregunta
+     */
+    public String[] IsAnswer(String oracion){
+        oracion = oracion.toLowerCase(); // transforma a minuscula
 
-        String traduccion = "";
-        String p = "";
-        //Se realiza la tokenizacion
-        StringTokenizer st = new StringTokenizer(palabra);
-        Boolean existe = false;
-        while(st.hasMoreTokens()){
-            String cad  = "";
-            for(PalabrasModel model:ListPalabras){
-                if(model.getSignificados() != null){
-                    List<String> listPalabras = model.getSignificados();
-                    for(String pal:listPalabras){
-                        if(pal.equals(st.nextToken().toString())){
-                            existe = true;
-                            cad = st.nextToken().toString();
-                        }
-                    }
+        //String[] listPal = oracion.split(String.valueOf(R.string.pregunta));
+        String[] listPal = oracion.split("¿");
+
+        String palabra = " ";
+        Log.d("largo",Integer.toString(listPal.length));
+
+        //Pregunta si existen datos en la lista
+        if(listPal.length  > 1  ){
+
+            for (String pal : listPal){
+                if(pal != ""){
+                    palabra = pal;
                 }
-
             }
 
-            if(existe){
-                traduccion += cad + " ";
-                existe = false;
-            }else{
-                traduccion += st.nextToken() + " ";
-            }
+            System.out.println(palabra);
+            int largo_pal = palabra.length()-1;
 
+            System.out.println("cadena"+" "+palabra.charAt(largo_pal));
+
+
+            return new String[]{"true", palabra};
+        }else{
+            return new String[]{"false", oracion};
         }
-        map.setText(traduccion);
+
+
+    }
+
+    /*
+        Funcion que busca palabra completa
+     */
+    public String BuscarPalabra(String oracion){
+
+        oracion = oracion.toLowerCase(); // transforma a minuscula
+        String palabra = " ";
+
+        //Realiza comprobacion para ver si es pregunta
+
+        String[] isAnswer= this.IsAnswer(oracion);
+
+        if(isAnswer[0].equals("true")){
+            Log.d("Palabra",isAnswer[1]);
+        }
+
+
+        for(PalabrasModel model:ListPalabras){
+            List<String> listPal = model.getSignificados();
+
+            //Recorre la lista palabra y busca la oracion completa si existe
+            for(String pal :listPal){
+                if(pal.toLowerCase().equals(oracion)){
+                    palabra = pal;
+                }
+            }
+        }
+
+        return palabra;
+    }
+
+    /*
+        Funcion principal que realiza la traduccion
+     */
+    public  String Traducir(){
+        //Primero busca la traduccion completa
+
+
+
+        String oracion_completa = this.BuscarPalabra(oracion);
+        if(oracion_completa != " ")
+        {
+            return oracion_completa;
+        }else{
+            //Si no existe como palabra completa
+            return "no existe";
+        }
+
     }
 }
