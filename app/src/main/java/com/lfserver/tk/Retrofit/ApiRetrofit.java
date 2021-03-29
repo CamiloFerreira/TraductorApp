@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.lfserver.tk.Model.ModelDic;
 import com.lfserver.tk.Model.PalabrasItem;
-import com.lfserver.tk.Model.PalabrasModel;
+import com.lfserver.tk.Model.Palabras_class;
 import com.lfserver.tk.Model.TradModel;
 
 import org.json.JSONException;
@@ -30,11 +30,11 @@ public class ApiRetrofit {
     Context context;
     private Retrofit retrofit;
     private ApiInterface apiInterface;
-    public  ArrayList<PalabrasModel> ListPalabras;
+    public  ArrayList<Palabras_class> ListPalabras;
     public ApiRetrofit(String url_base,Context context){
         this.url_base = url_base;
         this.context = context;
-        this.ListPalabras = new ArrayList<PalabrasModel>();
+        this.ListPalabras = new ArrayList<Palabras_class>();
 
         this.retrofit = new Retrofit.Builder()
                 .baseUrl(this.url_base)
@@ -60,16 +60,17 @@ public class ApiRetrofit {
                 if(!response.isSuccessful()){
                     Toast.makeText(context,"Codigo:" +response.code(),Toast.LENGTH_SHORT);
                 }else {
-                    List<ModelDic>  modelList = response.body();
+                    List<ModelDic>  modelDics = response.body();
 
-                    ArrayList<PalabrasModel> list2 = new ArrayList<>();
-                    for(ModelDic modelDic:modelList){
+                    ArrayList<Palabras_class> list2 = new ArrayList<>();
+                    for(ModelDic modelDic:modelDics){
+
                         String letra = modelDic.getLetra();
                         List<PalabrasItem> palabrasItemList = modelDic.getPalabras();
                         for(PalabrasItem palabrasItem:palabrasItemList){
-                            String palabra = palabrasItem.getPalabra();
+                            List<String> palabras = palabrasItem.getPalabra();
                             List<String> significados = palabrasItem.getSignificado();
-                            PalabrasModel model= new PalabrasModel(letra,palabra,significados);
+                            Palabras_class model= new Palabras_class(letra,palabras,significados);
                             list2.add(model);
                         }
                     }
@@ -119,7 +120,7 @@ public class ApiRetrofit {
 
     }
 
-    public ArrayList<PalabrasModel> getListPalabras() {
+    public ArrayList<Palabras_class> getListPalabras() {
         return ListPalabras;
     }
 

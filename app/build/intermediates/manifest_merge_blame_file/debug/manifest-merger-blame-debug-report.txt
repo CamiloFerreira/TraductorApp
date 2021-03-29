@@ -38,27 +38,28 @@
 22-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:9:9-54
 23        android:supportsRtl="true"
 23-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:10:9-35
-24        android:theme="@style/ActionBar"
-24-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:11:9-41
-25        android:usesCleartextTraffic="true" >
-25-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:12:9-44
-26        <activity
-26-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:13:9-18:20
-27            android:name="com.lfserver.tk.MainActivity"
-27-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:13:19-47
-28            android:theme="@style/ActionBar" >
-28-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:13:48-80
-29            <intent-filter>
-29-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:14:13-17:29
-30                <action android:name="android.intent.action.MAIN" />
-30-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:15:17-69
-30-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:15:25-66
-31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:16:17-77
-32-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:16:27-74
-33            </intent-filter>
-34        </activity>
-35    </application>
-36
-37</manifest>
+24        android:testOnly="true"
+25        android:theme="@style/ActionBar"
+25-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:11:9-41
+26        android:usesCleartextTraffic="true" >
+26-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:12:9-44
+27        <activity
+27-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:13:9-18:20
+28            android:name="com.lfserver.tk.MainActivity"
+28-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:13:19-47
+29            android:theme="@style/ActionBar" >
+29-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:13:48-80
+30            <intent-filter>
+30-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:14:13-17:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:15:17-69
+31-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:15:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:16:17-77
+33-->C:\Users\camil\Documents\MEGA\Proyecto\TraductorApp\app\src\main\AndroidManifest.xml:16:27-74
+34            </intent-filter>
+35        </activity>
+36    </application>
+37
+38</manifest>

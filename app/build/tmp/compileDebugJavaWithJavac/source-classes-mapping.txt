@@ -2,27 +2,24 @@ com/lfserver/tk/Model/ModelDic.java
  com.lfserver.tk.Model.ModelDic
 com/lfserver/tk/BuildConfig.java
  com.lfserver.tk.BuildConfig
-com/lfserver/tk/Retrofit/Model/PalabrasItem.java
- com.lfserver.tk.Retrofit.Model.PalabrasItem
-com/lfserver/tk/Model/PalabrasModel.java
- com.lfserver.tk.Model.PalabrasModel
-com/lfserver/tk/Retrofit/Model/ModelDic.java
- com.lfserver.tk.Retrofit.Model.ModelDic
-com/lfserver/tk/Model/TradModel.java
- com.lfserver.tk.Model.TradModel
+com/lfserver/tk/Model/Palabras_class.java
+ com.lfserver.tk.Model.Palabras_class
 com/lfserver/tk/Fragments/MainFragment.java
  com.lfserver.tk.Fragments.MainFragment
  com.lfserver.tk.Fragments.MainFragment$1
-com/lfserver/tk/MainActivity.java
- com.lfserver.tk.MainActivity
+com/lfserver/tk/Model/TradModel.java
+ com.lfserver.tk.Model.TradModel
+com/lfserver/tk/AdapterModel.java
+ com.lfserver.tk.AdapterModel
+ com.lfserver.tk.AdapterModel$ViewHolder
+com/lfserver/tk/Modelo.java
+ com.lfserver.tk.Modelo
 com/lfserver/tk/Fragments/FragmentCreditos.java
  com.lfserver.tk.Fragments.FragmentCreditos
-com/lfserver/tk/Retrofit/Model/PalabrasModel.java
- com.lfserver.tk.Retrofit.Model.PalabrasModel
 com/lfserver/tk/Traductor.java
  com.lfserver.tk.Traductor
-com/lfserver/tk/Retrofit/Model/TradModel.java
- com.lfserver.tk.Retrofit.Model.TradModel
+com/lfserver/tk/Model/PalabrasItem.java
+ com.lfserver.tk.Model.PalabrasItem
 com/lfserver/tk/Fragments/FragmentDiccionario.java
  com.lfserver.tk.Fragments.FragmentDiccionario
  com.lfserver.tk.Fragments.FragmentDiccionario$1
@@ -32,10 +29,5 @@ com/lfserver/tk/Retrofit/ApiRetrofit.java
  com.lfserver.tk.Retrofit.ApiRetrofit$2
 com/lfserver/tk/Retrofit/ApiInterface.java
  com.lfserver.tk.Retrofit.ApiInterface
-com/lfserver/tk/Model/PalabrasItem.java
- com.lfserver.tk.Model.PalabrasItem
-com/lfserver/tk/Modelo.java
- com.lfserver.tk.Modelo
-com/lfserver/tk/AdapterModel.java
- com.lfserver.tk.AdapterModel
- com.lfserver.tk.AdapterModel$ViewHolder
+com/lfserver/tk/MainActivity.java
+ com.lfserver.tk.MainActivity

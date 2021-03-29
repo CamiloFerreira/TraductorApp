@@ -2,7 +2,6 @@ package com.lfserver.tk.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,9 +27,6 @@ import java.util.ArrayList;
 import com.lfserver.tk.Model.*;
 import com.lfserver.tk.Traductor;
 
-import java.util.List;
-import java.util.StringTokenizer;
-
 
 /*
       @author : Luis Ferreira
@@ -47,7 +43,7 @@ public class MainFragment extends Fragment {
     EditText esp,map;
     ApiRetrofit api;
     Boolean existe_arch;
-    ArrayList<PalabrasModel> ListPalabras;
+    ArrayList<Palabras_class> ListPalabras;
 
     public  MainFragment(Boolean existe_arc, ApiRetrofit api){
         this.existe_arch = existe_arc;
@@ -110,7 +106,7 @@ public class MainFragment extends Fragment {
 
             Gson gson = new Gson();
 
-            Type modelList = new TypeToken<ArrayList<PalabrasModel>>(){}.getType();
+            Type modelList = new TypeToken<ArrayList<Palabras_class>>(){}.getType();
             // Carga los datos en el ArrayList
             this.ListPalabras = gson.fromJson(linea, modelList);
 

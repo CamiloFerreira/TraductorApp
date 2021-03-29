@@ -28,7 +28,7 @@ import com.google.gson.reflect.TypeToken;
 import com.lfserver.tk.AdapterModel;
 import com.lfserver.tk.R;
 import com.lfserver.tk.Retrofit.ApiRetrofit;
-import com.lfserver.tk.Model.PalabrasModel;
+import com.lfserver.tk.Model.Palabras_class;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -47,7 +47,7 @@ import java.util.ArrayList;
 public class FragmentDiccionario extends Fragment implements AdapterView.OnItemSelectedListener, TextWatcher {
     Spinner trad_comb,letra_comb;
     EditText palabra;
-    ArrayList <PalabrasModel> listPalabras;
+    ArrayList <Palabras_class> listPalabras;
     RecyclerView recycler;
     ApiRetrofit apiRetrofit;
     AdapterModel adaptador;
@@ -125,7 +125,7 @@ public class FragmentDiccionario extends Fragment implements AdapterView.OnItemS
 
             Gson gson = new Gson();
 
-            Type modelList = new TypeToken<ArrayList<PalabrasModel>>(){}.getType();
+            Type modelList = new TypeToken<ArrayList<Palabras_class>>(){}.getType();
             // Carga los datos en el ArrayList
             this.listPalabras = gson.fromJson(linea, modelList);
 
@@ -154,10 +154,10 @@ public class FragmentDiccionario extends Fragment implements AdapterView.OnItemS
                 //Vuelve a recargar el recicycler view con los datos seleccionados
                String letra = letra_comb.getSelectedItem().toString();
 
-               ArrayList<PalabrasModel> ListFiltrada = new ArrayList<PalabrasModel>();
+               ArrayList<Palabras_class> ListFiltrada = new ArrayList<Palabras_class>();
 
                //Se busca las que contienen solamente la letra
-               for(PalabrasModel model : this.listPalabras){
+               for(Palabras_class model : this.listPalabras){
                    if(letra.equals(model.getLetra())){
                        ListFiltrada.add(model);
                    }
@@ -189,16 +189,16 @@ public class FragmentDiccionario extends Fragment implements AdapterView.OnItemS
         String text = palabra.getText().toString().toLowerCase(); // Obtiene la palabra
         String selection = trad_comb.getSelectedItem().toString().toLowerCase();
 
-        ArrayList<PalabrasModel> listSelection = new ArrayList<PalabrasModel>();
+        ArrayList<Palabras_class> listSelection = new ArrayList<Palabras_class>();
         if(text.length() > 0){
 
-            for(PalabrasModel model:listPalabras){
+            for(Palabras_class model:listPalabras){
                 if(selection.equals("esp")){
                     if(model.getSig().toLowerCase().contains(text)){
                         listSelection.add(model);
                     }
                 }else {
-                    if(model.getPalabra().toLowerCase().contains(text)){
+                    if(model.getPal().toLowerCase().contains(text)){
                         listSelection.add(model);
                     }
                 }

@@ -20,7 +20,7 @@ import com.lfserver.tk.Fragments.FragmentCreditos;
 import com.lfserver.tk.Fragments.FragmentDiccionario;
 import com.lfserver.tk.Fragments.MainFragment;
 import com.lfserver.tk.Retrofit.ApiRetrofit;
-import com.lfserver.tk.Model.PalabrasModel;
+import com.lfserver.tk.Model.Palabras_class;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private  void getJson(){
 
-        ArrayList<PalabrasModel>  palabras = apiRetrofit.ListPalabras;
+        ArrayList<Palabras_class>  palabras = apiRetrofit.ListPalabras;
 
 
         if(apiRetrofit.isOnline()){

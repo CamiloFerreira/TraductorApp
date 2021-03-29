@@ -8,15 +8,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.lfserver.tk.Model.PalabrasModel;
+import com.lfserver.tk.Model.Palabras_class;
 
 import java.util.ArrayList;
 
 public class AdapterModel extends RecyclerView.Adapter<AdapterModel.ViewHolder> {
 
-    private ArrayList<PalabrasModel> modeloList;
+    private ArrayList<Palabras_class> modeloList;
 
-    public AdapterModel(ArrayList<PalabrasModel> aModelo){
+    public AdapterModel(ArrayList<Palabras_class> aModelo){
         this.modeloList = aModelo;
     }
 
@@ -49,8 +49,8 @@ public class AdapterModel extends RecyclerView.Adapter<AdapterModel.ViewHolder> 
 
         }
 
-        public void assignarDatos(PalabrasModel modelo) {
-            palabra.setText(modelo.getPalabra());
+        public void assignarDatos(Palabras_class modelo) {
+            palabra.setText(modelo.getPal());
             significado.setText(modelo.getSig());
         }
     }

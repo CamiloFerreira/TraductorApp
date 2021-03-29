@@ -1,4 +1,0 @@
-#Wed Mar 10 02:00:09 CLST 2021
-base.0=C\:\\Users\\camil\\Documents\\MEGA\\Practica\\Traductor-esp\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex

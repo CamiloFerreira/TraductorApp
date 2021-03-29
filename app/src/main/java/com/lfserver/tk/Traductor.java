@@ -4,19 +4,18 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.EditText;
 
-import com.lfserver.tk.Model.PalabrasModel;
+import com.lfserver.tk.Model.Palabras_class;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.StringTokenizer;
 
 public class Traductor{
 
-    ArrayList <PalabrasModel> ListPalabras;
+    ArrayList <Palabras_class> ListPalabras;
     String oracion ;
     EditText map;
     Context context;
-    public Traductor(ArrayList<PalabrasModel> listPalabras, String palabra, EditText map, Context context) {
+    public Traductor(ArrayList<Palabras_class> listPalabras, String palabra, EditText map, Context context) {
         this.ListPalabras = listPalabras;
         this.oracion = palabra;
         this.map = map;
@@ -81,7 +80,7 @@ public class Traductor{
         }
 
 
-        for(PalabrasModel model:ListPalabras){
+        for(Palabras_class model:ListPalabras){
             List<String> listPal = model.getSignificados();
 
             //Recorre la lista palabra y busca la oracion completa si existe
